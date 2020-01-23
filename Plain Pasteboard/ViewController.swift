@@ -12,9 +12,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.text = "Hello Suada Amazing!!"
+    }
+    
+    func addText() {
+        showText()
     }
 
-
+    func showText() {
+        textView.text = UIPasteboard.general.string
+    }
+    
+    @IBAction func trashWasPressed(_ sender: Any) {
+       
+    }
+    
 }
 

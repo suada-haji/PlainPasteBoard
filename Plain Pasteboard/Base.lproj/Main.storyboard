@@ -25,7 +25,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37J-PS-mmR">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="trash" id="i8o-Kl-IYR"/>
+                                    <barButtonItem systemItem="trash" id="i8o-Kl-IYR">
+                                        <connections>
+                                            <action selector="trashWasPressed:" destination="BYZ-38-t0r" id="sJk-CA-WMI"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
