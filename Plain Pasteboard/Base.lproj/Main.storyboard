@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,26 +15,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zXq-ub-VB4">
-                                <rect key="frame" x="20" y="44" width="383" height="809"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zXq-ub-VB4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37J-PS-mmR">
-                                <rect key="frame" x="4" y="801" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37J-PS-mmR">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="trash" id="i8o-Kl-IYR"/>
+                                    <barButtonItem systemItem="trash" id="i8o-Kl-IYR">
+                                        <connections>
+                                            <action selector="trashWasPressed:" destination="BYZ-38-t0r" id="sJk-CA-WMI"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="37J-PS-mmR" secondAttribute="trailing" symbolic="YES" id="Agw-EH-VNc"/>
+                            <constraint firstItem="37J-PS-mmR" firstAttribute="top" secondItem="zXq-ub-VB4" secondAttribute="bottom" id="CXM-UT-zG5"/>
+                            <constraint firstItem="zXq-ub-VB4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lcv-PP-6fZ"/>
+                            <constraint firstItem="zXq-ub-VB4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lje-SM-pS1"/>
+                            <constraint firstItem="zXq-ub-VB4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YLF-6t-XCI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="37J-PS-mmR" secondAttribute="bottom" id="gYw-zh-End"/>
+                            <constraint firstItem="37J-PS-mmR" firstAttribute="top" secondItem="zXq-ub-VB4" secondAttribute="bottom" symbolic="YES" id="lOl-25-TKr"/>
+                            <constraint firstItem="zXq-ub-VB4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nmc-to-hPC"/>
+                            <constraint firstItem="37J-PS-mmR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qac-91-Hvs"/>
+                            <constraint firstItem="zXq-ub-VB4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="v7n-NT-4C7"/>
+                            <constraint firstItem="zXq-ub-VB4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zwM-3L-8ZQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="zXq-ub-VB4" id="Yey-Wv-lgP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
